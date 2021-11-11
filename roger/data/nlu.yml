@@ -1,0 +1,63 @@
+version: '2.0'
+nlu:                              # User input text samples
+- intent: greet                   # Input category
+  examples: |                     # Input examples
+    - Hi
+    - Hey
+    - Hello
+    - Hi there
+    - Hey there
+    - Hello there
+    - Good morning
+    - Good afternoon
+    - Okay Google
+    - OK Google
+    - Hey Siri
+    - Hey Alexa
+    - Help
+    - Help me
+
+- intent: add schedule
+  examples: |
+    - Help me schedule an event.
+    - I need to schedule an appointment.
+    - Can you schedule a task?
+    - Add an event.
+    - Add an assignment.
+    - Add a task.
+
+- intent: check schedule
+  examples: |
+    - What is on my schedule?
+    - Check my schedule.
+    - What do I have scheduled?
+    - What is my task?
+    - When is my event?
+    - Do I have an appointment?
+
+- intent: edit schedule
+  examples: |
+    - Change my schedule.
+    - Update my schedule.
+    - Edit my schedule.
+    - Can you change the task?
+    - Can you update the event?
+    - Can you edit the appointment?
+    - Help me change the event.
+    - Help me update the appointment.
+    - Help me edit the task.
+    - I need to change my appointment.
+    - I need to update the task.
+    - I need to edit the event.
+
+- intent: inform
+  examples: |
+    - Dental Appointment
+    - Birthday Party
+    - Team Meeting
+    - 7 November 2021
+    - 3 Aug 1776
+    - December 16, 1987
+    - Jan 27, 2020
+    - 3:30 AM
+    - 12:45 PM

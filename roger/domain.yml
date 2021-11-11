@@ -1,0 +1,62 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- greet
+- add schedule
+- check schedule
+- edit schedule
+- inform
+
+slots:
+  name:
+    type: unfeaturized
+    influence_conversation: false
+  date:
+    type: unfeaturized
+    influence_conversation: false
+  time:
+    type: unfeaturized
+    influence_conversation: false
+
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+   utter_ask_name:
+       - text: |
+           What is the name for this event?
+   utter_ask_date:
+       - text: |
+           What day would you like to schedule for?
+   utter_ask_time:
+       - text: |
+           What time will it take place?
+   utter_event_added:
+       - text: |
+           {name} has been scheduled on {date} at {time}.
+   utter_event:
+       - text: |
+           You have a {name} scheduled on {date} at {time}.
+
+actions:
+- '...'
+- utter_greet
+- utter_ask_name
+- utter_ask_date
+- utter_ask_time
+- utter_event_added
+- utter_event
+- action_reset
+
+forms:
+  event_form:
+    required_slots:
+      name:
+        - type: from_text
+      date:
+        - type: from_text
+      time:
+        - type: from_text

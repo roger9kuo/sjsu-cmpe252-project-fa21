@@ -1,0 +1,24 @@
+version: '2.0'
+rules:
+ - rule: activate event form
+   steps:
+   - intent: add schedule
+   - action: event_form
+   - active_loop: event_form
+
+ - rule: submit form
+   condition:
+   - active_loop: event_form
+   steps:
+   - action: event_form
+   - active_loop: null
+   - slot_was_set:
+       - requested_slot: null
+   - action: utter_event_added
+
+ - rule: activate event form
+   steps:
+   - intent: edit schedule
+   - action: action_reset
+   - action: event_form
+   - active_loop: event_form
