@@ -1,0 +1,15 @@
+rules:
+ - rule: activate name form
+   steps:
+   - intent: send_message
+   - action: name_form
+   - active_loop: name_form
+
+ - rule: submit form
+   condition:
+   - active_loop: name_form
+   steps:
+   - action: name_form
+   - active_loop: null
+   - action: utter_sent_message
+

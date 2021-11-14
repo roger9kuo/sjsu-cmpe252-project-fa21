@@ -1,0 +1,13 @@
+forms:
+  name_form:
+    required_slots:
+      name:
+      - type: from_entity 
+        entity: name
+      message:
+      - type: from_entity
+        entity: message
+  reply_form:
+    required_slots:
+      response:
+      - type: from_text

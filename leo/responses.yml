@@ -1,0 +1,34 @@
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi!
+   utter_check_message:
+       - text: |
+           You have new messages!
+       - text: |
+           You don't have any new messages.
+   utter_sent_message:
+       - text: |
+           Your message has been sent. 
+   utter_ask_name_message:
+       - text: |
+           Who do you want to send a message to?
+       - text: |
+           What message do you want to send?
+   utter_weather:
+       - text: |
+           Today is a nice day
+   utter_read_message:
+       - text: |
+           Bob says: Do you want to join our party?
+           Alice says: Do you want to come over to the study group?
+           Jack says: What's up
+   utter_ask_reply:
+       - text: |
+           What do you want to say?
+   utter_reply_sent:
+       - text: |
+           Your message: "{response}" has been sent
+        

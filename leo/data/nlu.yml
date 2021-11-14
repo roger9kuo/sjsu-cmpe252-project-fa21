@@ -1,0 +1,48 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey!
+    - Hallo
+    - Good day
+    - Good morning
+- intent: check_message
+  examples: |
+    - Can you check my messages?
+    - Do I have new messages?
+- intent: send_message
+  examples: |
+    - Send a message for me
+    - Please send him a message
+    - Please send her a message
+    - send message
+- intent: inform
+  examples: |
+    - Tell [Bob](name) to [run](message)
+    - Tell [Elisa](name) that [I will be on time](message)
+    - Talk to [Peter](name) that [I might be late](message)
+    - Say [Hi](message) to [Peter](name)
+    - tell [Bob](name) to [run](message)
+    - I would love to go
+    - I will go today
+    - Sorry I can't come today
+- intent: check_weather
+  examples: |
+    - What's the weather?
+    - How's the weather?
+- intent: read_message
+  examples: |
+    - What does it say?
+    - What the message says?
+    - Read the message for me.
+- intent: confirm
+  examples: |
+    - Yes
+    - yes
+    - Of course
+    - Sure
+
+- intent: reject
+  examples: |
+    - No

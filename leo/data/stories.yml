@@ -1,0 +1,41 @@
+stories:
+ - story: greet and check message
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: check_message
+   - action: utter_check_message
+   - intent: read_message
+   - action: utter_read_message
+   - action: reply_form
+   - active_loop: reply_form
+
+ - story: send message
+   steps:
+   - intent: send_message
+   - action: name_form
+   - active_loop: name_form
+
+ - story: check weather
+   steps:
+   - intent: check_weather
+   - action: utter_weather
+
+ - story: check and reply message
+   steps:
+   - intent: check_message
+   - action: utter_check_message
+   - intent: read_message
+   - action: utter_read_message
+   - intent: confirm
+   - action: utter_ask_reply
+   - action: reply_form
+   - action: utter_reply_sent
+ 
+ - story: check but reject reply
+   steps:
+   - intent: check_message
+   - action: utter_check_message
+   - intent: read_message
+   - action: utter_read_message
+   - intent: reject

@@ -1,0 +1,79 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+
+intents:
+- inform
+- send_message
+- greet
+- check_message
+- enter_message
+- check_weather
+- read_message
+- confirm
+
+entities:
+- message
+- name
+- response
+slots:
+  name:
+    type: text
+    influence_conversation: false
+  message:
+    type: text
+    influence_conversation: false
+  response:
+    type: text
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: |
+      Hello! How can I help you?
+  - text: |
+      Hi!
+  utter_check_message:
+  - text: |
+      You have new messages!
+  utter_sent_message:
+  - text: |
+      Your message has been sent. 
+  utter_ask_name:
+  - text: |
+      Please tell me who do you want to reach, and what's the message.
+  utter_weather:
+  - text: |
+      Today is a nice day
+  utter_read_message:
+  - text: |
+      Bob says: "Do you want to join our party?" Do you want to reply?
+  utter_ask_reply:
+  - text: |
+      What do you want to say?
+  utter_reply_sent:
+  - text: |
+      Your message: "{response}" has been sent    
+actions:
+- '...'
+- utter_ask_name
+- utter_check_message
+- utter_greet
+- utter_sent_message
+- utter_weather
+- utter_read_message
+- utter_ask_reply
+- utter_reply_sent
+forms:
+  name_form:
+    required_slots:
+      name:
+      - type: from_entity
+        entity: name
+      message:
+      - type: from_entity
+        entity: message 
+  reply_form:
+    required_slots:
+      response:
+      - type: from_text
