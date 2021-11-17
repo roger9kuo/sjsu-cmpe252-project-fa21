@@ -1,26 +1,30 @@
 version: '2.0'
 
 stories:
- - story: greet and add schedule
+ - story: greet
    steps:
    - intent: greet
    - action: utter_greet
+
+ - story: add schedule
+   steps:
    - intent: add schedule
    - action: event_form
    - active_loop: event_form
 
- - story: greet and check schedule
+ - story: check schedule
    steps:
-   - intent: greet
-   - action: utter_greet
    - intent: check schedule
    - action: utter_event
 
- - story: greet and edit schedule
+ - story: edit schedule
    steps:
-   - intent: greet
-   - action: utter_greet
    - intent: edit schedule
    - action: action_reset
    - action: event_form
    - active_loop: event_form
+
+ - story: chitchat
+   steps:
+   - intent: chitchat
+   - action: utter_chitchat

@@ -29,7 +29,9 @@ nlu:                              # User input text samples
 - intent: check schedule
   examples: |
     - What is on my schedule?
+    - Can you check what is on my schedule?
     - Check my schedule.
+    - Can you check my schedule?
     - What do I have scheduled?
     - What is my task?
     - When is my event?
@@ -61,3 +63,24 @@ nlu:                              # User input text samples
     - Jan 27, 2020
     - 3:30 AM
     - 12:45 PM
+
+- intent: chitchat/ask_job
+  examples: |
+    - What do you do?
+    - How can you help me?
+    - What is your job?
+    - What are you capable of?
+
+- intent: chitchat/ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+
+- intent: chitchat/ask_weather
+  examples: |
+    - What's the weather like today?
+    - Does it look sunny outside today?
+    - Oh, do you mind checking the weather for me please?
+    - I like sunny days.

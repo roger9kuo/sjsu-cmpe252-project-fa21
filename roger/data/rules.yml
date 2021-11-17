@@ -22,3 +22,8 @@ rules:
    - action: action_reset
    - action: event_form
    - active_loop: event_form
+
+ - rule: respond to chitchat
+   steps:
+   - intent: chitchat
+   - action: utter_chitchat

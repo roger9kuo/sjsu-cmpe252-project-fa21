@@ -9,6 +9,7 @@ intents:
 - check schedule
 - edit schedule
 - inform
+- chitchat
 
 slots:
   name:
@@ -40,6 +41,17 @@ responses:
    utter_event:
        - text: |
            You have a {name} scheduled on {date} at {time}.
+   utter_chitchat/ask_job:
+       - text: I can help schedule a task for you.
+       - text: I can help schedule an appointment for you.
+       - text: I can help schedule an event for you.
+   utter_chitchat/ask_name:
+       - text: Hello, my name is Alexa.
+       - text: I am called Siri!
+       - text: Don't worry about it.
+   utter_chitchat/ask_weather:
+       - text: Oh, it does look sunny right now.
+       - text: I am not sure of the whole week but I can see the sun is out today.
 
 actions:
 - '...'
@@ -49,6 +61,7 @@ actions:
 - utter_ask_time
 - utter_event_added
 - utter_event
+- utter_chitchat
 - action_reset
 
 forms:
