@@ -8,7 +8,7 @@ Run venv first
 - Command Prompt:
   - > .\venv\Scripts\activate
 - Bash: 
-  - $ source .\venv\Scripts\activate
+  - > source .\venv\Scripts\activate
 
 Create training models before running/testing
 - > rasa train
