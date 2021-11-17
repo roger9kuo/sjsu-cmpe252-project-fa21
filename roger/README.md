@@ -5,8 +5,10 @@ Project build in
 - Python 3.8.1
 
 Run venv first
-- Command Prompt:> .\venv\Scripts\activate
-- Bash:$ source .\venv\Scripts\activate
+- Command Prompt:
+  - > .\venv\Scripts\activate
+- Bash: 
+  - $ source .\venv\Scripts\activate
 
 Create training models before running/testing
 - > rasa train
