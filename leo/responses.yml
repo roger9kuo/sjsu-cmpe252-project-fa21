@@ -23,12 +23,28 @@ responses:
    utter_read_message:
        - text: |
            Bob says: Do you want to join our party?
-           Alice says: Do you want to come over to the study group?
-           Jack says: What's up
    utter_ask_reply:
        - text: |
            What do you want to say?
    utter_reply_sent:
        - text: |
            Your message: "{response}" has been sent
-        
+   utter_accept_reject:
+       - text: |
+           OK!
+   utter_how_greet:
+       - text: |
+           I am doing very well!
+       - text: |
+           I'm doing great!
+       - text: |
+           Good!
+   utter_introduce:
+       - text: |
+           I am an AI that can help manage your messages!
+   utter_introduce_how:
+       - text: |
+           Simply ask me if you have messages, and I can help you more!
+   utter_rethank:
+       - text: |
+           You are welcome!

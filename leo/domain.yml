@@ -12,7 +12,11 @@ intents:
 - check_weather
 - read_message
 - confirm
-
+- reject
+- ask_function
+- ask_how
+- greet_how
+- thank
 entities:
 - message
 - name
@@ -54,6 +58,25 @@ responses:
   utter_reply_sent:
   - text: |
       Your message: "{response}" has been sent    
+  utter_accept_reject:
+  - text: |
+      OK!
+  utter_how_greet:
+  - text: |
+      I am doing very well!
+  - text: |
+      I'm doing great!
+  - text: |
+      Good!
+  utter_introduce:
+  - text: |
+      I am an AI that can help manage your messages!
+  utter_introduce_how:
+  - text: |
+      Simply ask me if you have messages, and I can help you more!
+  utter_rethank:
+  - text: |
+      You are welcome!
 actions:
 - '...'
 - utter_ask_name
@@ -64,6 +87,11 @@ actions:
 - utter_read_message
 - utter_ask_reply
 - utter_reply_sent
+- utter_accept_reject
+- utter_how_greet
+- utter_introduce
+- utter_introduce_how
+- utter_rethank
 forms:
   name_form:
     required_slots:

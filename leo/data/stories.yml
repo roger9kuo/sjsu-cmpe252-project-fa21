@@ -1,15 +1,4 @@
 stories:
- - story: greet and check message
-   steps:
-   - intent: greet
-   - action: utter_greet
-   - intent: check_message
-   - action: utter_check_message
-   - intent: read_message
-   - action: utter_read_message
-   - action: reply_form
-   - active_loop: reply_form
-
  - story: send message
    steps:
    - intent: send_message
@@ -39,3 +28,27 @@ stories:
    - intent: read_message
    - action: utter_read_message
    - intent: reject
+   - action: utter_accept_reject
+
+ - story: greet
+   steps:
+   - intent: greet
+   - action: utter_greet
+
+ - story: ask functions
+   steps:
+   - intent: ask_function
+   - action: utter_introduce
+   - intent: ask_how
+   - action: utter_introduce_how
+
+ - story: greet how
+   steps:
+   - intent: greet_how
+   - action: utter_how_greet
+
+ - story: thank you
+   steps:
+   - intent: thank
+   - action: utter_rethank
+

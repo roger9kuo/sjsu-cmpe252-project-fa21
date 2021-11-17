@@ -7,6 +7,9 @@ nlu:
     - Hallo
     - Good day
     - Good morning
+    - Hey there, stranger!
+    - Hello, bot!
+    - What's up!
 - intent: check_message
   examples: |
     - Can you check my messages?
@@ -36,13 +39,34 @@ nlu:
     - What does it say?
     - What the message says?
     - Read the message for me.
+    - Read it for me
 - intent: confirm
   examples: |
     - Yes
     - yes
     - Of course
     - Sure
-
 - intent: reject
   examples: |
     - No
+- intent: greet_how
+  examples: |
+    - How are you?
+    - How you doing?
+    - How's your day today?
+- intent: ask_function
+  examples: |
+    - What are you?
+    - What can you do for me?
+    - What's your function?
+- intent: ask_how
+  examples: |
+    - How do I use you?
+    - How do you help me?
+    - How can you help me?
+- intent: thank
+  examples: |
+    - Thank you!
+    - Thank you so much!
+    - Thanks
+    - thx
