@@ -51,6 +51,9 @@ responses:
    utter_confirm:
        - text: |
            Is this correct?
+   utter_conclude:
+       - text: |
+           Okay.
    utter_schedule/ask_name:
        - text: |
            The event is {name}.
@@ -87,6 +90,7 @@ actions:
 - utter_event_added
 - utter_event
 - utter_confirm
+- utter_conclude
 - utter_schedule
 - utter_chitchat
 - action_reset

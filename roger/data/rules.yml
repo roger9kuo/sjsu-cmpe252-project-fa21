@@ -15,7 +15,6 @@ rules:
    - slot_was_set:
        - requested_slot: null
    - action: utter_event_added
-   - action: utter_confirm
 
  - rule: activate event form
    steps:
