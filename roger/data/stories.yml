@@ -6,6 +6,11 @@ stories:
    - intent: greet
    - action: utter_greet
 
+ - story: farewell
+   steps:
+   - intent: farewell
+   - action: utter_farewell
+
  - story: add schedule
    steps:
    - intent: add schedule
@@ -19,12 +24,7 @@ stories:
 
  - story: edit schedule
    steps:
-   - intent: edit schedule
+   - intent: edit
    - action: action_reset
    - action: event_form
    - active_loop: event_form
-
- - story: chitchat
-   steps:
-   - intent: chitchat
-   - action: utter_chitchat

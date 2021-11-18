@@ -17,6 +17,17 @@ nlu:                              # User input text samples
     - Help
     - Help me
 
+- intent: farewell
+  examples: |
+    - Goodbye
+    - Bye
+    - Farewell
+    - See you
+    - Catch you later
+    - Later
+    - Peace
+    - Deuces
+
 - intent: add schedule
   examples: |
     - Help me schedule an event.
@@ -37,7 +48,7 @@ nlu:                              # User input text samples
     - When is my event?
     - Do I have an appointment?
 
-- intent: edit schedule
+- intent: edit/schedule
   examples: |
     - Change my schedule.
     - Update my schedule.
@@ -51,6 +62,51 @@ nlu:                              # User input text samples
     - I need to change my appointment.
     - I need to update the task.
     - I need to edit the event.
+
+- intent: edit/name
+  examples: |
+    - Can you change the name of the appointment?
+    - Update the name of the task.
+    - Help me edit the name of the event.
+
+- intent: edit/date
+  examples: |
+    - Can you change the date of the appointment?
+    - Update the date of the task.
+    - Help me edit the date of the event.
+
+- intent: edit/time
+  examples: |
+    - Can you change the date of the appointment?
+    - Update the date of the task.
+    - Help me edit the date of the event.
+
+- intent: schedule/ask_name
+  examples: |
+    - What is the appointment?
+    - What is the name of the event?
+    - What is the task?
+    - Tell me what the appointment is.
+    - Tell me what the name of the event is.
+    - Tell me what the task is.
+
+- intent: schedule/ask_date
+  examples: |
+    - What day is the appointment?
+    - Which day is the event?
+    - What day is the task scheduled for?
+
+- intent: schedule/ask_time
+  examples: |
+    - What time is the appointment?
+    - What time does the event start?
+    - What time is the task scheduled for?
+
+- intent: schedule/ask_date_time
+  examples: |
+    - When is the appointment?
+    - When is the event scheduled for?
+    - When day and time is the task?
 
 - intent: inform
   examples: |
@@ -84,3 +140,47 @@ nlu:                              # User input text samples
     - Does it look sunny outside today?
     - Oh, do you mind checking the weather for me please?
     - I like sunny days.
+
+- intent: accept
+  examples: |
+    - Yes
+    - Y
+    - Continue
+    - Proceed
+    - Next
+    - Okay
+    - OK
+    - Sure
+    - Alright
+
+- intent: reject
+  examples: |
+    - No
+    - N
+    - Stop
+    - Cancel
+    - Exit
+    - Quit
+
+- intent: chitchat/random
+  examples: |
+    - Can you help me with my homework?
+    - Can you read my messages?
+    - Can you cook?
+    - Tell me a joke.
+    - Give me a riddle.
+    - What is your sign?
+    - Who is your daddy?
+    - What does he do?
+    - To infinite and beyond.
+    - alskj ofds omiva
+    - #$F6T VS23E TV%4YB
+
+- intent: chitchat/insult
+  examples: |
+    - I hate you.
+    - You suck.
+    - Go away.
+    - You are awful.
+    - This is terrible.
+    - This stinks.

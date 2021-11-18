@@ -15,13 +15,19 @@ rules:
    - slot_was_set:
        - requested_slot: null
    - action: utter_event_added
+   - action: utter_confirm
 
  - rule: activate event form
    steps:
-   - intent: edit schedule
+   - intent: edit
    - action: action_reset
    - action: event_form
    - active_loop: event_form
+
+ - rule: respond to schedule questions
+   steps:
+   - intent: schedule
+   - action: utter_schedule
 
  - rule: respond to chitchat
    steps:
