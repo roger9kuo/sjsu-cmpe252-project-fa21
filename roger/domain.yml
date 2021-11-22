@@ -5,11 +5,15 @@ session_config:
 
 intents:
 - greet
+- farewell
 - add schedule
 - check schedule
-- edit schedule
+- edit
+- schedule
 - inform
 - chitchat
+- accept
+- reject
 
 slots:
   name:
@@ -26,6 +30,9 @@ responses:
    utter_greet:
        - text: |
            Hello! How can I help you?
+   utter_farewell:
+     - text: |
+           Bye.
    utter_ask_name:
        - text: |
            What is the name for this event?
@@ -41,26 +48,50 @@ responses:
    utter_event:
        - text: |
            You have a {name} scheduled on {date} at {time}.
+   utter_confirm:
+       - text: |
+           Is this correct?
+   utter_conclude:
+       - text: |
+           Okay.
+   utter_schedule/ask_name:
+       - text: |
+           The event is {name}.
+   utter_schedule/ask_date:
+       - text: |
+          You have scheduled it on {date}.
+   utter_schedule/ask_time:
+       - text: |
+          You have scheduled it at {time}.
+   utter_schedule/ask_date_time:
+       - text: |
+          You scheduled it for {date} at {time}.
    utter_chitchat/ask_job:
        - text: I can help schedule a task for you.
        - text: I can help schedule an appointment for you.
        - text: I can help schedule an event for you.
    utter_chitchat/ask_name:
-       - text: Hello, my name is Alexa.
-       - text: I am called Siri!
        - text: Don't worry about it.
    utter_chitchat/ask_weather:
        - text: Oh, it does look sunny right now.
        - text: I am not sure of the whole week but I can see the sun is out today.
+   utter_chitchat/random:
+       - text: I did not understand that.
+   utter_chitchat/insult:
+       - text: I cannot help you.
 
 actions:
 - '...'
 - utter_greet
+- utter_farewell
 - utter_ask_name
 - utter_ask_date
 - utter_ask_time
 - utter_event_added
 - utter_event
+- utter_confirm
+- utter_conclude
+- utter_schedule
 - utter_chitchat
 - action_reset
 
