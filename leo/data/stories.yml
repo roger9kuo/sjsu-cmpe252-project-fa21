@@ -52,3 +52,58 @@ stories:
    - intent: thank
    - action: utter_rethank
 
+
+ - story: interactive_story_1
+   steps:
+   - intent: send_message
+   - action: name_form
+   - active_loop: name_form
+   - slot_was_set:
+     - requested_slot: name
+   - slot_was_set:
+     - name: Bob
+   - slot_was_set:
+     - message: I changed my mind
+   - slot_was_set:
+     - message: I changed my mind
+   - slot_was_set:
+     - name: Bob
+   - slot_was_set:
+     - requested_slot: null
+   - active_loop: null
+   - action: utter_sent_message
+
+ - story: redo
+   steps:
+   - intent: redo
+   - action: utter_redo
+
+ - story: mark
+   steps:
+   - intent: mark_read
+   - action: utter_mark
+
+ - story: remove notifications
+   steps:
+   - intent: remove_notification
+   - action: utter_removed
+
+ - story: turn off notifications
+   steps:
+   - intent: off_notification
+   - action: utter_notification_off
+
+ - story: turn on notifications
+   steps:
+   - intent: on_notification
+   - action: utter_notification_on
+
+ - story: turn on disturb
+   steps:
+   - intent: on_disturb
+   - action: utter_disturb_on
+
+ - story: turn off disturb
+   steps:
+   - intent: off_disturb
+   - action: utter_disturb_off

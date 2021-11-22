@@ -2,8 +2,8 @@ version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false
-
 intents:
+- on_disturb
 - inform
 - send_message
 - greet
@@ -17,6 +17,12 @@ intents:
 - ask_how
 - greet_how
 - thank
+- redo
+- mark_read
+- remove_notification
+- off_notification
+- on_notification
+- off_disturb
 entities:
 - message
 - name
@@ -42,7 +48,7 @@ responses:
       You have new messages!
   utter_sent_message:
   - text: |
-      Your message has been sent. 
+      Your message "{message}" has been sent to {name}. 
   utter_ask_name:
   - text: |
       Please tell me who do you want to reach, and what's the message.
@@ -77,21 +83,49 @@ responses:
   utter_rethank:
   - text: |
       You are welcome!
+  utter_redo:
+  - text: |
+      You have canceled your last message
+  utter_mark:
+  - text: |
+      You have marked your messages as read
+  utter_removed:
+  - text: |
+      You have removed all your notifications
+  utter_notification_off:
+  - text: |
+      You have turned off notifications
+  utter_notification_on:
+  - text: |
+      You have turned on notifications
+  utter_disturb_on:
+  - text: |
+      You have turned on disturb mode. You will not receive any messages until you turn off this mode.
+  utter_disturb_off:
+  - text: |
+      You have turned off disturb mode. You will now receive all the messages.
 actions:
 - '...'
-- utter_ask_name
-- utter_check_message
-- utter_greet
-- utter_sent_message
-- utter_weather
-- utter_read_message
-- utter_ask_reply
-- utter_reply_sent
 - utter_accept_reject
+- utter_ask_name
+- utter_ask_reply
+- utter_check_message
+- utter_disturb_off
+- utter_disturb_on
+- utter_greet
 - utter_how_greet
 - utter_introduce
 - utter_introduce_how
+- utter_mark
+- utter_notification_off
+- utter_notification_on
+- utter_read_message
+- utter_redo
+- utter_removed
+- utter_reply_sent
 - utter_rethank
+- utter_sent_message
+- utter_weather
 forms:
   name_form:
     required_slots:
@@ -100,7 +134,7 @@ forms:
         entity: name
       message:
       - type: from_entity
-        entity: message 
+        entity: message
   reply_form:
     required_slots:
       response:

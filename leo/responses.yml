@@ -11,7 +11,7 @@ responses:
            You don't have any new messages.
    utter_sent_message:
        - text: |
-           Your message has been sent. 
+           Your message "{message}" has been sent to {name}. 
    utter_ask_name_message:
        - text: |
            Who do you want to send a message to?
@@ -48,3 +48,25 @@ responses:
    utter_rethank:
        - text: |
            You are welcome!
+   utter_redo:
+       - text: |
+           You have canceled your last message
+   utter_mark:
+       - text: |
+           You have marked your messages as read
+   utter_removed:
+       - text: |
+           You have removed all your notifications
+   utter_notification_off:
+       - text: |
+           You have turned off notifications
+   utter_notification_on:
+       - text: |
+           You have turned on notifications
+   utter_disturb_on:
+       - text: |
+           You have turned on disturb mode. You will not receive any messages until you turn off this mode.
+   utter_disturb_off:
+       - text: |
+           You have turned off disturb mode. You will now receive all the messages.
+   

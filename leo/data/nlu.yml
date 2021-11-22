@@ -14,12 +14,14 @@ nlu:
   examples: |
     - Can you check my messages?
     - Do I have new messages?
+    - Do I have message?
 - intent: send_message
   examples: |
     - Send a message for me
     - Please send him a message
     - Please send her a message
     - send message
+    - I want to send message
 - intent: inform
   examples: |
     - Tell [Bob](name) to [run](message)
@@ -30,6 +32,7 @@ nlu:
     - I would love to go
     - I will go today
     - Sorry I can't come today
+    - Tell [Bob](name) that [I changed my mind](message)
 - intent: check_weather
   examples: |
     - What's the weather?
@@ -70,3 +73,43 @@ nlu:
     - Thank you so much!
     - Thanks
     - thx
+- intent: redo
+  examples: |
+    - redo
+    - cancel my last message
+- intent: mark_read
+  examples: |
+    - Mark all my messages as read
+    - Mark the messages as read
+- intent: remove_notification
+  examples: |
+    - remove the notifications
+    - clean the notifications for me
+    - Remove all the notifications
+- intent: off_notification
+  examples: |
+    - stop notifications
+    - I don't want to see notifications
+    - I want to turn off notifications
+    - I don't want to get disturbed by notifications
+- intent: on_notification
+  examples: |
+    - turn on notifications
+    - I want see notifications
+    - I want to open notifications
+- intent: on_disturb
+  examples: |
+    - turn on don't disturb mode
+    - I don't want to be disturbed
+    - Please turn on don't disturb mode
+    - I don't want to receive message now
+    - I don't want to see messages now
+    - i don't want to be disturbed
+    - please turn on don't disturb mode
+    - i don't want to receive message now
+- intent: off_disturb
+  examples: |
+    - Turn off disturb mode
+    - Turn off don't disturb mode
+    - I want to receive message now
+    - I want to start getting messages now
