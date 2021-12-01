@@ -12,6 +12,8 @@ Note: The chat bot is only capable of handling one event in this iteration.
 
 ## Project Environment
 - Windows 10
+- Rasa 2.8.12
+- Rasa SDK 2.8.2
 - Python 3.8.1
 
 ## Steps
